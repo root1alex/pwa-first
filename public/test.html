@@ -1,0 +1,24 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<dom-module id="my-test">
+  <template>
+    <style>
+    </style>
+
+    My name is <span>[[_formatName(first, last)]]</span>
+
+  </template>
+  <script>
+    Polymer({
+      is: 'my-test',
+
+      properties: {
+        first: String,
+        last: String,
+      },
+
+      _formatName: (first, last) =>  first + ' ' + last,
+
+    });
+  </script>
+</dom-module>
